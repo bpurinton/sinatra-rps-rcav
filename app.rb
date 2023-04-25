@@ -14,6 +14,18 @@ end
 # `ruby app.rb`
 set(:port, 3000)
 
+# we can add some additional configuration to our app
+# To open .html.erb files, need to register them
+Tilt.register Tilt::ERBTemplate, 'html.erb'
+
+# we would also like a nicer error page in development
+if settings.development?
+  require 'better_errors'
+  require 'binding_of_caller'
+  use BetterErrors::Middleware
+  BetterErrors.application_root = __dir__
+end
+
 # we define our first route with sinatra's get method
 get('/') do
   # we can pass plain text
