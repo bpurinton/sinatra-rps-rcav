@@ -2,7 +2,7 @@ require_relative './app'
 
 configure do
   # GitHub pages deployment
-  set :public_folder, './'
+  # set :public_folder, './'
 
   # To open .html.erb files, need to register them
   Tilt.register Tilt::ERBTemplate, 'html.erb'
