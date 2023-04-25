@@ -7,6 +7,12 @@ require 'sinatra'
 # are in development mode
 if settings.development?
   require "sinatra/reloader"
+
+  # we would also like a nicer error page in development
+  require 'better_errors'
+  require 'binding_of_caller'
+  use(BetterErrors::Middleware)
+  BetterErrors.application_root = __dir__
 end
 
 # we use the `set` method with the :port argument to 
@@ -14,17 +20,8 @@ end
 # `ruby app.rb`
 set(:port, 3000)
 
-# we can add some additional configuration to our app
 # To open .html.erb files, need to register them
-Tilt.register Tilt::ERBTemplate, 'html.erb'
-
-# we would also like a nicer error page in development
-if settings.development?
-  require 'better_errors'
-  require 'binding_of_caller'
-  use BetterErrors::Middleware
-  BetterErrors.application_root = __dir__
-end
+Tilt.register(Tilt::ERBTemplate, 'html.erb')
 
 # we define our first route with sinatra's get method
 get('/') do
