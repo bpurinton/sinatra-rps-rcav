@@ -1,5 +1,4 @@
 require './app'
-require './environment'
 require 'capybara/dsl'
 require "draft_matchers"
 require "rspec-html-matchers"
