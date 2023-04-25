@@ -24,7 +24,7 @@ get('/') do
 end
 
 # we can define another route to our rock page
-get '/rock' do
+get('/rock') do
   # we can simply redirect somewhere
   # redirect("https://www.wikipedia.org")
 
