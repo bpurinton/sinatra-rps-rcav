@@ -29,5 +29,10 @@ get('/rock') do
   # redirect("https://www.wikipedia.org")
 
   # or we can render an html page from the root
-  send_file("rock.html")
+  # send_file("rock.html")
+
+  # but even better, we can make a views folder
+  # and render a new type of file from there
+  # we call the file "views/rock.erb"
+  erb(:rock)
 end
