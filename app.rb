@@ -42,6 +42,6 @@ get('/rock') do
 
   # but even better, we can make a views folder
   # and render a new type of file from there
-  # we call the file "views/rock.erb"
+  # we call the file "views/rock.html.erb"
   erb(:rock)
 end
