@@ -20,7 +20,7 @@
 		"**/.git": true,
 		".vscode": true,
 		".bundle": true,
-    // ".*": true,
+    ".*": true,
     // "*.ru": true,
     "Dockerfile": true,
     // "Gem*": true,
