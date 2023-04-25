@@ -15,7 +15,7 @@ end
 set(:port, 3000)
 
 # we define our first route with sinatra's get method
-get '/' do
+get('/') do
   # we can pass plain text
   # "Hello, world!"
 
