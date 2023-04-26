@@ -30,7 +30,7 @@
     // "app.rb": true,
     // "environment.rb": true,
     // "bin/": true,
-    // "spec/": true,
+    "spec/": true,
     "examples.txt": true,
   },
   "files.insertFinalNewline": true,
