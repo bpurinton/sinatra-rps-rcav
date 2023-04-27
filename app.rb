@@ -13,6 +13,9 @@ if settings.development?
   require 'binding_of_caller'
   use(BetterErrors::Middleware)
   BetterErrors.application_root = __dir__
+  if ENV['TRUSTED_IP']
+    BetterErrors::Middleware.allow_ip!(ENV['TRUSTED_IP'])
+  end
 end
 
 # we use the `set` method with the :port argument to 
