@@ -1,2 +1,2 @@
-require 'bundler/setup'
+require './config/environment'
 run Sinatra::Application
