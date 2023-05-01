@@ -2,6 +2,9 @@
 # objects and methods
 require 'sinatra'
 
+# require the controller
+require './controllers/game_controller.rb'
+
 # we define our first route with sinatra's get method
 get('/') do
   # we can pass plain text
@@ -30,16 +33,10 @@ end
 
 # let's define a paper route
 get('/paper') do
-  # before we render the paper page, we can add our logic
-  @comp_move = ["rock", "paper", "scissors"].sample
-    
-  if @comp_move == "rock"
-    @outcome = "won"
-  elsif @comp_move == "paper"
-    @outcome =  "tied"
-  elsif @comp_move == "scissors"
-    @outcome = "lost"
-  end
+
+  game = GameController.new.paper
+  @comp_move = game.comp_move
+  @outcome = game.outcome
 
   erb(:paper)#, :layout => :application_layout)
 end
