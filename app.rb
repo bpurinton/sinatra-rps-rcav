@@ -34,7 +34,9 @@ end
 # let's define a paper route
 get('/paper') do
 
-  @game = GameController.new.paper
+  game = GameController.new.paper
+  @comp_move = game.comp_move
+  @outcome = game.outcome
 
   erb(:paper)#, :layout => :application_layout)
 end
