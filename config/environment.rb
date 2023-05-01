@@ -20,7 +20,5 @@ configure :development do
   # need this configure for better errors
   use(BetterErrors::Middleware)
   BetterErrors.application_root = __dir__
-  if ENV['TRUSTED_IP']
-    BetterErrors::Middleware.allow_ip!(ENV['TRUSTED_IP'])
-  end
+  BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 end
