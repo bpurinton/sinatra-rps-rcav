@@ -2,6 +2,9 @@
 # objects and methods
 require 'sinatra'
 
+# require the controller
+require './controllers/game_controller'
+
 # we define our first route with sinatra's get method
 get('/') do
   # we can pass plain text
@@ -30,10 +33,9 @@ end
 
 # let's define a paper route
 get('/paper') do
-  @controller = GameController.new
-
-  # controller = GameController.new
-  # @
+  @game = GameController.new.paper
+  # puts @game.comp_move
+  # puts @game.outcome
 
   erb(:paper)#, :layout => :application_layout)
 end

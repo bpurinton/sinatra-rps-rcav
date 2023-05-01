@@ -1,5 +1,4 @@
 require './app'
-require './controllers/game_controller'
 
 configure do
   # To open .html.erb files, need to register them
