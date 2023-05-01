@@ -13,6 +13,6 @@ class GameController
       @outcome = "lost"
     end
 
-    self
+    return self
   end
 end
