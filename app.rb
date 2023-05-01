@@ -33,7 +33,9 @@ end
 
 # let's define a paper route
 get('/paper') do
-  @game = GameController.new.paper
+  game = GameController.new.paper
+  puts game.comp_move
+  puts game.outcome
   # puts @game.comp_move
   # puts @game.outcome
 

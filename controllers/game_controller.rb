@@ -1,5 +1,5 @@
 class GameController
-  attr_accessor :comp_move, :outcome
+  attr_reader :comp_move, :outcome
 
   def paper
     # move our logic to the game controller
@@ -13,5 +13,6 @@ class GameController
       @outcome = "lost"
     end
 
+    self
   end
 end
