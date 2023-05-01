@@ -3,7 +3,7 @@
 require 'sinatra'
 
 # require the controller
-require './controllers/game_controller'
+require './controllers/game_controller.rb'
 
 # we define our first route with sinatra's get method
 get('/') do
