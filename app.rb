@@ -31,5 +31,9 @@ end
 # let's define a paper route
 get('/paper') do
   @controller = GameController.new
+
+  # controller = GameController.new
+  # @
+
   erb(:paper)#, :layout => :application_layout)
 end

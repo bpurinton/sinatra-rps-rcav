@@ -1,5 +1,6 @@
 class GameController
-  
+  attr_accessor :comp_move, :outcome
+
   def paper
     # move our logic to the game controller
     @comp_move = ["rock", "paper", "scissors"].sample
