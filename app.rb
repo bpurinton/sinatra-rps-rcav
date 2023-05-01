@@ -30,6 +30,6 @@ end
 
 # let's define a paper route
 get('/paper') do
-
+  puts GameController.new.paper
   erb(:paper)#, :layout => :application_layout)
 end
