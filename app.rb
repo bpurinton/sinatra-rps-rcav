@@ -30,16 +30,6 @@ end
 
 # let's define a paper route
 get('/paper') do
-  # before we render the paper page, we can add our logic
-  @comp_move = ["rock", "paper", "scissors"].sample
-    
-  if @comp_move == "rock"
-    @outcome = "won"
-  elsif @comp_move == "paper"
-    @outcome =  "tied"
-  elsif @comp_move == "scissors"
-    @outcome = "lost"
-  end
 
   erb(:paper)#, :layout => :application_layout)
 end
